@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky",
-    "test": "vitest"
+    "e2e": "npm run dev & wait-on http://localhost:5173 && npx cypress run",
+    "test": "vitest run && npm run e2e"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -31,6 +32,7 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
-    "vitest": "^2.0.5"
+    "vitest": "^2.0.5",
+    "wait-on": "^8.0.0"
   }
 }
